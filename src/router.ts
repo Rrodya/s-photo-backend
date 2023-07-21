@@ -6,28 +6,6 @@ const router = Router();
 
 
 
-/**
- * @swagger
- * /posts/{id}:
- *   get:
- *     summary: Get a single post by ID
- *     parameters:
- *       - in: path
- *         name: id
- *         description: ID of the post
- *         required: true
- *         schema:
- *           type: integer
- *     responses:
- *       200:
- *         description: OK
- *         content:
- *           application/json:
- *             schema:
- *               $ref: '#/components/schemas/Post'
- *       404:
- *         description: Post not found
- */
 router.get("/posts/:id", PostController.getOne);
 /**
  * @swagger
